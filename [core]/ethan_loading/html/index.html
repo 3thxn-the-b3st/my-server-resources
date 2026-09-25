@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="assets/vendor/bootstrap-icons.min.css">
+	<script src="assets/vendor/particles.min.js"></script>
+	<title>Real City - Loading Screen</title>
+	<script src="config.js"></script>
+</head>
+<body>
+	<div id="particles-js"></div>
+	<div class="winter"></div>
+
+	<iframe allow="autoplay; encrypted-media" id="youtube-video"></iframe>
+
+	<div class="panel left staffteam" style="display:none;">
+		<h3>Team:</h3>
+		<div class="list staff_team"></div>
+	</div>
+
+	<div class="panel right panelInfo" style="display:none;">
+		<div class="dots" id="dotsContainer"></div>
+		<div class="list panelInfo" id="tipsContainer"></div>
+		<div class="progress-box">
+			<div class="progress-bar" id="progressBar"></div>
+		</div>
+	</div>
+
+	<div class="music-player" style="display:none;">
+		<div class="music-info">
+			<div class="music-icon">
+				<i class="bi bi-music-note-beamed"></i>
+			</div>
+			<div class="music-details">
+				<div class="song-title">Song Title</div>
+				<div class="artist">Artist Name</div>
+			</div>
+		</div>
+		<div class="music-controls">
+			<button class="play-pause" onclick="toggleMusicPause()">
+				<i class="bi bi-pause-fill"></i>
+			</button>
+			<button class="mute-btn" onclick="toggleMusicMute()">
+				<i class="bi bi-volume-up"></i>
+			</button>
+			<div class="music-volume-control">
+				<input type="range" min="0" max="100" step="1" value="35" class="music-volume-slider" oninput="setMusicVolume(this.value)">
+				<span class="volume-text">35%</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="loading-bar">
+		<p>0%</p>
+		<div class="bar">
+			<div class="line"></div>
+		</div>
+	</div>
+	<div class="loading"></div>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script type="text/javascript" src="assets/js/youtube-iframe-api.js"></script>
+</body>
+</html>

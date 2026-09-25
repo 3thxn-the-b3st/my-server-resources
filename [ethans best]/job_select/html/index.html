@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Selection Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" style="display: none;">
+        
+        <div id="job-menu" class="container">
+            <h1>Select Your Path</h1>
+            <p>Choose a career to take the entrance exam. You must pass to continue.</p>
+            <div class="job-cards">
+                <div class="card" id="card-police" onclick="startQuiz('police')">
+                    <img src="https://images.unsplash.com/photo-1589747970742-b065609ee3cd?w=400&q=80" alt="Police">
+                    <h2>Police</h2>
+                </div>
+                <div class="card" id="card-ambulance" onclick="startQuiz('ambulance')">
+                    <img src="https://images.unsplash.com/photo-1587559070757-f72a388edbba?w=400&q=80" alt="Ambulance">
+                    <h2>Ambulance</h2>
+                </div>
+                <div class="card" id="card-mechanic" onclick="startQuiz('mechanic')">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80" alt="Mechanic">
+                    <h2>Mechanic</h2>
+                </div>
+                <div class="card" id="card-gang" onclick="startQuiz('gang')">
+                    <img src="https://images.unsplash.com/photo-1517551061975-f93322a36d27?w=400&q=80" alt="Gang">
+                    <h2>Gang</h2>
+                </div>
+                <div class="card" id="card-civilian" onclick="startQuiz('civilian')">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd0987ab7e2b?w=400&q=80" alt="Civilian">
+                    <h2>Civilian</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-container" class="container" style="display: none;">
+            <h1 id="quiz-title">Entrance Exam</h1>
+            <p id="question-counter" style="color: #4da8da; font-weight: bold;"></p>
+            <p id="error-message" style="color: #d9534f; display: none; font-weight: bold;">Please select an answer to proceed.</p>
+            
+            <div id="single-question-wrapper" class="question-block"></div>
+            
+            <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+            <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit Exam</button>
+            <button id="back-btn" onclick="goBackToMenu()">Back to Selection</button>
+        </div>
+
+        <div id="result-container" class="container" style="display: none;">
+            <h1 id="result-title"></h1>
+            <p id="result-message" style="font-size: 1.2rem; margin: 20px 0;"></p>
+            <button id="result-action-btn"></button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
