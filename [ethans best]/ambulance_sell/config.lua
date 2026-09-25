@@ -5,7 +5,7 @@ Config.Ambulance = {
     CommandStart = 'sellamb',
     CommandStop = 'stopsellamb',
     Job = 'ambulance',
-    Interval = 10000, -- 1 minute
+    Interval = 15000, -- 1 minute
     PatienceTimer = 30000, -- 30 seconds before dying
     Items = {
         { item = 'medikit', label = 'Medikit', price = 500 },
